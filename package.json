@@ -17,6 +17,7 @@
     "bootstrap": "^5.3.8",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^7.18.1"
   },
   "devDependencies": {
