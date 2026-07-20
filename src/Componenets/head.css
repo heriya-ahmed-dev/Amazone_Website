@@ -1,0 +1,48 @@
+.Amazon_logo{
+    height: 60px;
+    width: 100px;
+    margin-top: 0px;
+    margin-left:  10px;
+    border-radius: 5px;
+}
+.bl{
+    background-color: red;
+}
+
+.bold{
+    font-weight: 400;
+}
+
+.search_bar{
+    width: 650px;
+    height: 43px;
+    border: 2px solid rgb(199, 191, 191);
+    margin: 15px auto auto 15px;
+    outline: none;
+    background-color: white;
+    border-radius: 12px;
+    
+}
+
+.flag{
+    width:35px;
+    margin:0px auto auto 7px;
+    border-radius: 3px;
+}
+
+.main{
+    height: 60px;
+    background-color: black;
+}
+.hovering:hover{
+    margin-top: 2px;
+    border: 2px solid white;
+}
+
+.hovered:hover{
+    height: 53px;
+    border: 2px  solid white
+}
+.h{
+    height: 29px;
+}
