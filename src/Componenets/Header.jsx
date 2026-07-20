@@ -5,6 +5,7 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import './head.css'
+import InnerHeader from './InnerHeader';
 const Header = () => {
   return (
    <div className='bl'>
