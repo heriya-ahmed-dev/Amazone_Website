@@ -4,6 +4,7 @@ import './App.css'
 import { Route,Routes,BrowserRouter } from 'react-router-dom'
 import InnerHeader from './Componenets/InnerHeader';
 import CarouselPage from './Componenets/CarouselPage';
+import Products from './Images/Products';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Header/>
         <InnerHeader/>
         <CarouselPage/>
+        <Products/>
       </BrowserRouter>
     </div>
   )
