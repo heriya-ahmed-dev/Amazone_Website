@@ -9,7 +9,7 @@ const Mens = () => {
         .then((res)=> res.json())
         .then((data)=> SetMens(data))
     },[])
-    console.log(Mens)
+   
   return (
     <div className=' m-5 grid  grid-cols-3'>
         {Mens.map((items)=>{
@@ -18,6 +18,7 @@ const Mens = () => {
                        <img src={items.image} className='w-[250px] h-[200px] object-contain m-3'/>
                        <h6 className='text-center px-2 h-[30px]'>{items.title}</h6>
                        <Rating/>
+                        <h6>${items.price}</h6>
                 </div>
             )
         })}

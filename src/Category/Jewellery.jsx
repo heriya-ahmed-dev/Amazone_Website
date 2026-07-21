@@ -9,7 +9,7 @@ const Jewellery = () => {
         .then((res)=> res.json())
         .then((data)=> SetJewellery(data))
     },[])
-    console.log(Jewellery)
+    
   return (
     <div className=' m-5 grid  grid-cols-3'>
         {Jewellery.map((items)=>{
@@ -18,6 +18,7 @@ const Jewellery = () => {
                        <img src={items.image} className='w-[250px] h-[200px] object-contain m-3'/>
                        <h6 className='text-center px-2 h-[40px] line-clamp-2'>{items.title}</h6>
                        <Rating/>
+                        <h6>${items.price}</h6>
                 </div>
             )
         })}
