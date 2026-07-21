@@ -38,10 +38,10 @@ const Header = () => {
             <Link to="/list" className='hovered text-decoration-none' >
              <span className='text-white'> Sign in <br/>Accounts & lists </span>
            </Link>
-            <Link to = "/Orders"className='ms-3 hovered text-decoration-none Link-light' href="Orders">
+            <Link to = "/order" className='ms-3 hovered text-decoration-none Link-light' href="Orders">
               <span className='text-white'>returns <br/>& orders</span>
             </Link>
-            <Link to="/Cart">
+            <Link to="/cart">
             <ShoppingCartOutlinedIcon className='ms-3 mt-2 w-5 hovering text-white' />.
             </Link>
          </div>
