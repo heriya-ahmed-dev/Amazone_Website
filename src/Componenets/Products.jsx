@@ -1,11 +1,9 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import Rating from './Rating';
+import { Link } from 'react-router-dom';
 const Products = () => {
     const [products,setProducts] = useState([]);
-    const [rating,setRating] = useState(0);
-    const [hover,sethover] = useState(0);
-    const star = [1,2,3,4,5]
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products')
         .then((res)=>res.json())
@@ -16,9 +14,10 @@ const Products = () => {
     <div className='grid grid-cols-4 justify-content-center w-[1100px] m-auto mb-4'>
      {products.map((items)=>{
         return(
+            <Link to={`products/${items.id}`} className='text-decoration-none text-[#bada55]'>
             <div key={items.id} className='w-[250px]  mt-5  shadow-2xl rounded-[10px] p-2 h-[380px]'>
                 <img src={items.image} className='w-[150px] h-[180px] object-contain mx-auto my-2'/>
-                <h6 className='text-center line-clamp-2 h-[40px] mb-0'>{items.title}</h6>
+                <h6 className='text-center line-clamp-2 h-[40px] mb-0 text-[black]'>{items.title}</h6>
                 <div className='flex text-center ps-3'>
                     <Rating/>
                 </div>
@@ -27,6 +26,7 @@ const Products = () => {
                     <button className='mx-2'>Add to cart</button>
                     </div>
             </div>
+            </Link>
         )
      })}
         

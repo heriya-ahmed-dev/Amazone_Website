@@ -6,12 +6,14 @@ import InnerHeader from './Componenets/InnerHeader';
 import CarouselPage from './Componenets/CarouselPage';
 import Routing from './Routing';
 import Rating from './Componenets/Rating';
+import Product from './Product/Product';
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
         <Routing/>
+        {/* <Product/> */}
       </BrowserRouter>
     </div>
   )
