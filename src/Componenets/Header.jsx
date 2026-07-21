@@ -5,25 +5,26 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import './head.css'
-import InnerHeader from './InnerHeader';
+import InnerHeader from './InnerHeader.jsx';
 const Header = () => {
   return (
-   <div className='bl'>
+    <div>
+   <div className=''>
     <div className='d-flex text-light main'>
       <div className='d-flex '>
-         <div>
+         <Link to='/'>
             <img src="https://i.pinimg.com/736x/fa/16/b8/fa16b892512b3df516211c68fc489134.jpg" alt="Amazon_logo"
               className='Amazon_logo hovering'
             />
-         </div>
+         </Link>
          <div className='d-flex mt-1 hovering'>
             <LocationOnOutlinedIcon className='my-2 mx-2'/>
             <p>Delivered To<br/><span className='fs-5 fw-semibold'>Ethiopia</span></p>
          </div>
       </div>
-      <div className=''>
-          <input type="text" placeholder='' className='search_bar mt-2 ' />
-        
+       <div>
+        <input
+          type="text" placeholder="Search your Favorite" className="ms-2 w-[650px] h-[43px] mt-[15px] rounded-xl border-2 border-gray-300 outline-none bg-white text-black px-3"/>
       </div>
      
         <div className='d-flex'>
@@ -48,7 +49,10 @@ const Header = () => {
    
 
     </div>
-        {/* <InnerHeader/>       */}
+           
+    </div>
+    <div className='inner-test'> <InnerHeader/> </div>
+     
     </div>
   )
 }

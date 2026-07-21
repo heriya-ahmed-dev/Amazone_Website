@@ -4,19 +4,19 @@ import './App.css'
 import { Route,Routes,BrowserRouter } from 'react-router-dom'
 import InnerHeader from './Componenets/InnerHeader';
 import CarouselPage from './Componenets/CarouselPage';
-import Products from './Images/Products';
+import Routing from './Routing';
+import Rating from './Componenets/Rating';
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Header/>
-        <InnerHeader/>
-        <CarouselPage/>
-        <Products/>
+        <Routing/>
       </BrowserRouter>
     </div>
   )
 }
 
-export default App
+export default App;
+
+
