@@ -25,7 +25,7 @@ const Products = ({AddItems}) => {
                 <p className='ps-3 text-[20px] font-semibold'>${items.price}</p>
                 <div className='w-full bg-[#FFC067] ps-2 p-1 rounded-[10px] hover:bg-[#F56E02] text-center'>
 
-                    <button className='mx-2' onClick={AddItems}>Add to cart</button>
+                    <button className='mx-2' onClick={()=>AddItems(items)}>Add to cart</button>
                     </div>
             </div>
         )

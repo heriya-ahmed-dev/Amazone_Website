@@ -45,9 +45,9 @@ const Header = ({cart}) => {
             <Link to = "/order" className='ms-3 hovered text-decoration-none Link-light' href="Orders">
               <span className='text-white'>returns <br/>& orders</span>
             </Link>
-            <Link to="/cart" className='h-1 text-decoration-none'>
+            <Link to="/cart" className='ms-3 relative h-1 text-decoration-none'>
              <h5 className='link-light'>{cart}</h5>
-            <ShoppingCartOutlinedIcon className='ms-3 mt-2 w-5 hovering text-white' />.
+            <ShoppingCartOutlinedIcon className=' mt-4 w-[50px] hovering text-white absolute -top-2 -right-2' />.
             </Link>
          </div>
       </div>

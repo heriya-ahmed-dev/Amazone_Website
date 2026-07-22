@@ -13,22 +13,26 @@ import Products from './Componenets/Products';
 import { useState } from 'react';
 const Routing = () => {
 
-  const [cart,setCart] = useState(0)
+  const [cart,setCart] = useState(0);
+  const [cartItems,setCartItems] = useState([]);
+
+
   
-    const AddItems = () =>{
+    const AddItems = (product) =>{
        setCart(prev => prev + 1)
+       setCartItems(prev => [...prev,product])
     }
 
   return (
     <div className=''>
         <Header cart = {cart}/>
         <Routes>
-            <Route path='/products/:id' element={<ProductCard/>}/>
-            <Route path='/cart' element ={<Cart/>}/>
+            <Route path='/products/:id' element={<ProductCard AddItems={AddItems}/>}/>
+            <Route path='/cart' element ={<Cart cartItems={cartItems}/>}/>
             <Route path='/order' element ={<Order/>}/>
             <Route path= '/' element = {<>
                <CarouselPage/>
-               <Products AddItems = {()=>AddItems()}/>
+               <Products AddItems = {AddItems}/>
             </>}/>
             <Route path='/jewellery' element = {<Jewellery/>}/>
             <Route path='/electronics' element = {<Electronics/>}/>

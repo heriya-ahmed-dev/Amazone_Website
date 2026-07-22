@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect , useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Rating from '../Componenets/Rating'
-const ProductCard = () => {
+const ProductCard = ({AddItems}) => {
     const {id} = useParams()
      const [prod,setProd] = useState([])
      useEffect(()=>{
@@ -26,7 +26,7 @@ const ProductCard = () => {
                 </div>
                 <p className='ps-3 text-[20px] font-semibold'>${prod.price}</p>
                 <div className='w-full bg-[orange] ps-2 p-1 rounded-[10px] hover:bg-[#FF8C00] text-center'>
-                    <button className='mx-2'>Add to cart</button>
+                    <button className='mx-2' onClick={()=>AddItems(prod)}>Add to cart</button>
                     </div>
             </div>
      </div>
