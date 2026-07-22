@@ -4,7 +4,7 @@ import CarouselPage from '../Componenets/CarouselPage';
 import Products from '../Componenets/Products';
 const LayOut = () => {
   return (
-    <div>
+    <div className='z-0'>
         <CarouselPage/>
         <Products/>
 

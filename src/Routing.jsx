@@ -8,7 +8,6 @@ import LayOut from './LayOut/LayOut';
 import Header from './Componenets/header';
 import Cart from './Componenets/Cart';
 import Order from './Componenets/Order';
-import Product from './Product/Product';
 import ProductCard from './Product/ProductCard';
 const Routing = () => {
   return (

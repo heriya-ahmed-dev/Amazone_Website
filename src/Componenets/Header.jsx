@@ -8,7 +8,7 @@ import './head.css'
 import InnerHeader from './InnerHeader.jsx';
 const Header = () => {
   return (
-    <div>
+    <div className='sticky top-0 z-[9999]'>
    <div className=''>
     <div className='d-flex text-light main'>
       <div className='d-flex '>

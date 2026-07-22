@@ -5,7 +5,7 @@ import { data } from './data';
 import Category from './Category';
 const CarouselPage = () => {
   return (
-    <div>
+    <div className='relative z-0'>
      <Carousel
        infiniteLoop = {true}
        showIndicator = {true}
