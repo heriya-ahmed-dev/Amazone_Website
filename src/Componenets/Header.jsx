@@ -6,7 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import './head.css'
 import InnerHeader from './InnerHeader.jsx';
-const Header = () => {
+import { useState } from 'react';
+import Products from './Products.jsx';
+const Header = ({cart}) => {
+  
+  
   return (
     <div className='sticky top-0 z-[9999]'>
    <div className=''>
@@ -24,7 +28,7 @@ const Header = () => {
       </div>
        <div>
         <input
-          type="text" placeholder="Search your Favorite" className="ms-2 w-[650px] h-[43px] mt-[15px] rounded-xl border-2 border-gray-300 outline-none bg-white text-black px-3"/>
+          type="text" placeholder="Search your Favorite" className="ms-2 w-[650px] h-[43px] mt-[20pxpx] rounded-xl border-2 border-gray-300 outline-none bg-white text-black px-3"/>
       </div>
      
         <div className='d-flex'>
@@ -41,7 +45,8 @@ const Header = () => {
             <Link to = "/order" className='ms-3 hovered text-decoration-none Link-light' href="Orders">
               <span className='text-white'>returns <br/>& orders</span>
             </Link>
-            <Link to="/cart">
+            <Link to="/cart" className='h-1 text-decoration-none'>
+             <h5 className='link-light'>{cart}</h5>
             <ShoppingCartOutlinedIcon className='ms-3 mt-2 w-5 hovering text-white' />.
             </Link>
          </div>

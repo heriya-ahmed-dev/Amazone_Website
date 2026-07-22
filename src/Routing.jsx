@@ -4,20 +4,32 @@ import Electronics from './Category/Electronics';
 import Mens from './Category/Mens';
 import Womens from './Category/Womens';
 import { Route , Routes } from 'react-router-dom';
-import LayOut from './LayOut/LayOut';
 import Header from './Componenets/header';
 import Cart from './Componenets/Cart';
 import Order from './Componenets/Order';
 import ProductCard from './Product/ProductCard';
+import CarouselPage from './Componenets/CarouselPage';
+import Products from './Componenets/Products';
+import { useState } from 'react';
 const Routing = () => {
+
+  const [cart,setCart] = useState(0)
+  
+    const AddItems = () =>{
+       setCart(prev => prev + 1)
+    }
+
   return (
-    <div>
-        <Header/>
+    <div className=''>
+        <Header cart = {cart}/>
         <Routes>
             <Route path='/products/:id' element={<ProductCard/>}/>
             <Route path='/cart' element ={<Cart/>}/>
             <Route path='/order' element ={<Order/>}/>
-            <Route path= '/' element = {<LayOut/>}/>
+            <Route path= '/' element = {<>
+               <CarouselPage/>
+               <Products AddItems = {()=>AddItems()}/>
+            </>}/>
             <Route path='/jewellery' element = {<Jewellery/>}/>
             <Route path='/electronics' element = {<Electronics/>}/>
             <Route path='/mens' element = {<Mens/>}/>

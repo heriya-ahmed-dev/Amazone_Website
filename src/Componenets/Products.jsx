@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import Rating from './Rating';
 import { Link } from 'react-router-dom';
-const Products = () => {
+const Products = ({AddItems}) => {
     const [products,setProducts] = useState([]);
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products')
@@ -24,7 +24,8 @@ const Products = () => {
                 </div>
                 <p className='ps-3 text-[20px] font-semibold'>${items.price}</p>
                 <div className='w-full bg-[#FFC067] ps-2 p-1 rounded-[10px] hover:bg-[#F56E02] text-center'>
-                    <button className='mx-2'>Add to cart</button>
+
+                    <button className='mx-2' onClick={AddItems}>Add to cart</button>
                     </div>
             </div>
         )
