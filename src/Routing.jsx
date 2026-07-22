@@ -28,7 +28,7 @@ const Routing = () => {
         <Header cart = {cart}/>
         <Routes>
             <Route path='/products/:id' element={<ProductCard AddItems={AddItems}/>}/>
-            <Route path='/cart' element ={<Cart cartItems={cartItems}/>}/>
+            <Route path='/cart' element ={<Cart cartItems={cartItems} cart = {cart}/>}/>
             <Route path='/order' element ={<Order/>}/>
             <Route path= '/' element = {<>
                <CarouselPage/>
